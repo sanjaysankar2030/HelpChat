@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+        <img src="{{ url_for('static', filename='ai3.jpg') }}" alt="Chatbot Image"id="chatbot-img">
+    <div id="output-div">
+        <textarea id="answer-text" rows="4" readonly placeholder="Answers here"></textarea>
+    </div>
+    
+    <div id="input-div">
+        <input type="text" id="user_input" name="user_input" placeholder="Ask questions here">
+        <button type="submit" class="submit-btn">Submit</button>
+        <button type="button" id="voice-btn">🎤</button>
+    </div>
+    
+    <audio id="audio" controls style="display: none;"></audio>
+    <!-- <button type="button" id="stop-btn" style="display: none;">Stop Audio</button> -->
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
